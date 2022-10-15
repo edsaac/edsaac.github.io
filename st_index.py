@@ -1,94 +1,163 @@
 import streamlit as st
-from dataclasses import dataclass
+import pandas as pd
+import hydralit_components as sthc
+
+st.set_page_config(
+    page_title="Edwin site",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'About': "Las updated: 10/14/2022"
+    }
+)
+
+@st.cache
+def generate_badge(kind:str, link:str) -> str:
+    if kind == "Streamlit App":
+        mkd = f"[![{kind}](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]({link})"
+    elif kind == "Github Repo":
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20repository&color=black&logo=github)]({link})"
+    elif kind == "Google Drive":
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20as%20slides&color=black&logo=googledrive)]({link})"
+    elif kind == "Google Scholar - Abstract":
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20abtract&color=black&logo=googlescholar)]({link})"
+    elif kind == "Iposter":
+        mkd = f"[![{kind}](https://img.shields.io/badge/Check%20as-iposter-purple.svg)]({link})"
+    elif kind == "Github Docs":
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20documentation&color=gray&logo=github)]({link})"
+    elif kind == "Maintained?":
+        if link.lower() == "no":
+            mkd = f"[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)]({link})"
+        else:
+            mkd = f"[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)]({link})"
+    else:
+        mkd = "<<Badge Missing>>"
+    return mkd
+
+@st.cache
+def load_dataframe(sheet:str):
+    df = pd.read_excel("./assets/database.xlsx", sheet_name=sheet)
+    return df
+
+# Add some styling with CSS selectors
+with open("assets/style.css") as f:
+    st.markdown(f"""
+    <style>
+        {f.read()}
+    </style>
+    """, unsafe_allow_html=True)
 
 "# Hello"
 "******"
 
-# Add some styling with CSS selectors
-st.markdown("""
-    <style>
-    img {
-        border-radius: 10px;
-        border: solid 1px #dadee8;
-    }
-
-    a[href] {
-        text-decoration: none;
-        color: #ff4b4b;
-    }
-
-    h1 {
-        font-size: 5rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .stRadio {
-        position: sticky;
-        top: 0px;
-        padding: 0px;
-        font-size: 25px;
-    }
-
-    iframe {
-        border-radius: 10px;
-        border: solid 1px #dadee8;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-categories = [
-    "Conferences",
-    "Labs",
-    "Repositories",
-    "Other stuff", 
-    "Social"
-]
-
+# Layout
 cols = st.columns([1, 2.5])
+
 with cols[0]:
-    category = st.radio("Categories", categories)
+
+    categories = ["Conferences", "Laboratories", "Repositories"]
+    category = st.radio("Select an option:", categories, 1)
+
+    st.markdown("""[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://github.com/edsaac/)""")
+
+    # # define what option labels and icons to display
+    # option_data = [
+    # {'icon': "💬", 'label':"Conferences"},
+    # {'icon':"🔬",'label':"Laboratories"},
+    # {'icon': "🗃️", 'label':"Repositories"}
+    # ]
+
+    # # Nav bar theme
+    # over_theme = {
+    #     'txc_inactive': 'gray',
+    #     'menu_background':'rgb(255, 75, 75, 0.1)',
+    #     'txc_active':'white',
+    #     'option_active':'rgb(255, 75, 75, 0.5)'}
+
+    # font_fmt = {'font-size':'150%', 'font-family':'"Source Sans Pro", sans-serif'}
+
+    # # Choosing menu
+    # category = sthc.option_bar(
+    #     option_definition=option_data,
+    #     title=None,
+    #     key='PrimaryOption',
+    #     font_styling=font_fmt,
+    #     override_theme=over_theme,
+    #     horizontal_orientation=False)
 
 with cols[1]:
     if category == "Conferences":
 
-        st.markdown(
-        """ 
-        ## Conference Presentations:
+        database = load_dataframe(category)
+        for i, row in database.iterrows():
+            st.markdown(f"""
+                ## {row['Short'].strip()}\n
+                **{row['Name'].strip()}**""")
+            st.image(f"./assets/screenshots/{row['ImagePath']}")
+            st.caption(f"{row['Title']}".strip())
+            
+            badges = [
+                generate_badge("Google Scholar - Abstract", row['Abstract']),
+                generate_badge("Iposter", row['Iposter']),
+                generate_badge("Google Drive", row['Gdoc'])
+            ]
 
-        **Frontiers in Hydrology Meeting - 2022:**
+            st.markdown(f"""
+            | {badges[0]} | {badges[1]} | {badges[2]} |
+            |:----:|:-----:|:----------:|
+            
+            ****
 
-        <a href="https://drive.google.com/file/d/1mWvkKyYLSsTlcwhARnBcJIzybApNEjBO/view?usp=sharing">
-            <img alt="See Poster" src="https://img.shields.io/static/v1?label=&message=Check poster&color=black&logo=googledrive">
-        </a>
+            """)
 
-        **AGU Fall Meeting - 2021:**
+    if category == "Laboratories":
+        database = load_dataframe(category)
         
-        <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFM.H35A..08S/abstract">
-            <img alt="See Abstract" src="https://img.shields.io/static/v1?label=&message=Check abstract&color=black&logo=googlescholar">
-        </a>        
-        <a href="https://docs.google.com/presentation/d/1Jar5ThSvhYYakgkJcQerM6tUsDkK27dI7FHSKAOGxEs/edit?usp=sharing">
-            <img alt="See Poster" src="https://img.shields.io/static/v1?label=&message=Check e-poster&color=black&logo=googledrive">
-        </a>
+        for i, row in database.iterrows():
+            st.markdown(f"""
+                ## [{row['Short'].strip()}]({row['Streamlit']})\n
+                **{row['Name'].strip()}**""")
+            st.image(f"./assets/screenshots/{row['ImagePath']}")
+            st.caption(f"{row['Title']}".strip())
+            
+            badges = [
+                generate_badge("Streamlit App", row['Streamlit']),
+                generate_badge("Github Repo", row['Github'])
+            ]
 
-        <div class="GSlides">
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRBti4D1lI79iBmhcXWaaz9kwt270yAzSmc8qmXTRIRJEK7Sy3Un84lnTJXDdUUQ-NALGBbByT3-oFX/embed?start=false&loop=true&delayms=60000" frameborder="0" width="400" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        </div>
+            st.markdown(f"""
+            | {badges[0]} | {badges[1]} |
+            |:----:|:-----:|
+            
+            ****
 
+            """)
 
-        **AGU Fall Meeting - 2020:**
+    if category == "Repositories":
+        database = load_dataframe(category)
         
-        <a href="https://docs.google.com/presentation/d/1M4uneQHBRlifLg2tcduoXKDNR0qy_G_FC06FYR3oAU8/edit?usp=sharing">
-            <img alt="See Poster" src="https://img.shields.io/static/v1?label=&message=Check e-poster&color=black&logo=googledrive">
-        </a>
-        <a href="https://ui.adsabs.harvard.edu/abs/2020AGUFMH112.0022S/abstract">
-            <img alt="See Abstract" src="https://img.shields.io/static/v1?label=&message=Check abstract&color=black&logo=googlescholar">
-        </a>
-        """, unsafe_allow_html=True)
+        for i, row in database.iterrows():
+            st.markdown(f"""
+                ## [{row['Short'].strip()}]({row['Github']})\n
+                **{row['Name'].strip()}**""")
+            st.image(f"./assets/screenshots/{row['ImagePath']}")
+            #st.caption(f"{row['Title']}".strip())
+            
+            badges = [
+                generate_badge("Github Docs", row['Documentation']),
+                generate_badge("Github Repo", row['Github']),
+                generate_badge("Maintained?", row['Maintained'])
+            ]
+
+            st.markdown(f"""
+            | {badges[0]} | {badges[1]} | {badges[2]} |
+            |:----:|:-----:|:-----:|
+            
+            ****
+
+            """)
+        
 
 # <h2>CEE440 Labs:</h2>
 
