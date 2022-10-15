@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(
     page_title="Edwin site",
     page_icon="🧊",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="collapsed",
     menu_items={
         'About': "Las updated: 10/14/2022"
@@ -60,6 +60,11 @@ with cols[0]:
 
     st.markdown("""[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://github.com/edsaac/)""")
 
+    "*****"
+
+    "**Edwin Y. Saavedra Cifuentes**"
+    "PhD.(c) - Northwestern University"
+    
     # # define what option labels and icons to display
     # option_data = [
     # {'icon': "💬", 'label':"Conferences"},
@@ -93,7 +98,7 @@ with cols[1]:
             st.markdown(f"""
                 ## {row['Short'].strip()}\n
                 **{row['Name'].strip()}**""")
-            st.image(f"./assets/screenshots/{row['ImagePath']}")
+            st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
             st.caption(f"{row['Title']}".strip())
             
             badges = [
@@ -117,7 +122,7 @@ with cols[1]:
             st.markdown(f"""
                 ## [{row['Short'].strip()}]({row['Streamlit']})\n
                 **{row['Name'].strip()}**""")
-            st.image(f"./assets/screenshots/{row['ImagePath']}")
+            st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
             st.caption(f"{row['Title']}".strip())
             
             badges = [
@@ -140,7 +145,7 @@ with cols[1]:
             st.markdown(f"""
                 ## [{row['Short'].strip()}]({row['Github']})\n
                 **{row['Name'].strip()}**""")
-            st.image(f"./assets/screenshots/{row['ImagePath']}")
+            st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
             #st.caption(f"{row['Title']}".strip())
             
             badges = [
