@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import hydralit_components as sthc
 
 st.set_page_config(
     page_title="Edwin site",
