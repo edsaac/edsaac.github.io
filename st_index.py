@@ -51,19 +51,18 @@ with open("assets/style.css") as f:
 "******"
 
 # Layout
-cols = st.columns([1, 2.5])
+cols = st.columns([1, 2.5], gap="large")
 
 with cols[0]:
 
     categories = ["Conferences", "Laboratories", "Repositories"]
     category = st.radio("Select an option:", categories, 1)
 
-    st.markdown("""[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://github.com/edsaac/)""")
+    "******"
+    """**Edwin Y. Saavedra Cifuentes** """
+    """PhD.(c) - Northwestern University"""
 
-    "*****"
-
-    "**Edwin Y. Saavedra Cifuentes**"
-    "PhD.(c) - Northwestern University"
+    st.markdown("""[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://scholar.google.com/citations?hl=en&user=th-VSYIAAAAJ&view_op=list_works&sortby=pubdate)""")
     
     # # define what option labels and icons to display
     # option_data = [
