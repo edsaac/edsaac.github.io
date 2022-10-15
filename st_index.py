@@ -16,15 +16,15 @@ def generate_badge(kind:str, link:str) -> str:
     if kind == "Streamlit App":
         mkd = f"[![{kind}](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]({link})"
     elif kind == "Github Repo":
-        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20repository&color=black&logo=github)]({link})"
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Repository&color=black&logo=github)]({link})"
     elif kind == "Google Drive":
-        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20as%20slides&color=black&logo=googledrive)]({link})"
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Slides&color=black&logo=googledrive)]({link})"
     elif kind == "Google Scholar - Abstract":
-        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20abtract&color=black&logo=googlescholar)]({link})"
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Abstract&color=black&logo=googlescholar)]({link})"
     elif kind == "Iposter":
-        mkd = f"[![{kind}](https://img.shields.io/badge/Check%20as-iposter-purple.svg)]({link})"
+        mkd = f"[![{kind}](https://img.shields.io/badge/🪧-Iposter-purple.svg)]({link})"
     elif kind == "Github Docs":
-        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Check%20documentation&color=gray&logo=github)]({link})"
+        mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Documentation&color=gray&logo=github)]({link})"
     elif kind == "Maintained?":
         if link.lower() == "no":
             mkd = f"[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)]({link})"
