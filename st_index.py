@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(
     page_title="Edwin site",
     page_icon="🧊",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="collapsed",
     menu_items={
         'About': "Las updated: 10/14/2022"
