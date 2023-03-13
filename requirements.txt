@@ -1,4 +1,1 @@
 streamlit
-extra-streamlit-components
-pandas
-openpyxl

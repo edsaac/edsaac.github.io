@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import json
 from typing import Union
 
@@ -9,7 +8,7 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="collapsed",
     menu_items={
-        'About': "Las updated: 10/14/2022"
+        'About': "Last updated: 03/13/2022"
     }
 )
 
@@ -135,7 +134,7 @@ with cols[1]:
                 generate_badge("Github Repo", row['Repo']),
                 generate_badge("Maintained", row['Maintained'])
             ]
-            st.write(badges)
+
             st.markdown(generate_badge_table(badges))
 
 
