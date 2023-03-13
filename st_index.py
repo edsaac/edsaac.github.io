@@ -136,5 +136,22 @@ with cols[1]:
             ]
 
             st.markdown(generate_badge_table(badges))
+    
+    elif category == "Other":
+        data = database["Other"]
+        
+        for i, (k,row) in enumerate(data.items()):
+            st.markdown(f"""
+                ## [{k.strip()}]({row['Repo']})\n
+                **{row['Name'].strip()}**""")
+            st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
+            
+            badges = [
+                generate_badge("Streamlit App", row['App']),
+                generate_badge("Github Repo", row['Repo']),
+                generate_badge("Maintained", row['Maintained'])
+            ]
+
+            st.markdown(generate_badge_table(badges))
 
 

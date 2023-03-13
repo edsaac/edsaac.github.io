@@ -88,5 +88,14 @@
             "Documentation": "https://www.pflotran.org/documentation/user_guide/cards/subsurface/chemistry/bioparticle_card.html",
             "Maintained": "no"
         }
+    },
+    "Other":{
+        "SAGE Data":{
+            "Name": "Retrieve and plot data from the Waggle/SAGE network",
+            "ImagePath": "sageplotsapp.png",
+            "App": "https://sage-data.streamlit.app/",
+            "Repo": "https://github.com/edsaac/sage_plotting",
+            "Maintained": "yes"
+        }
     }
 }
