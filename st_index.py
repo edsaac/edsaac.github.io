@@ -102,15 +102,23 @@ with cols[1]:
             
             st.markdown(generate_badge_table(badges))
 
-    elif category == "Laboratories":
+    elif category == "Classes & Labs":
         
-        data = database["Laboratories"]
+        class_code = st.selectbox(
+            "Select a course:", 
+            options = database["Classes & Labs"].keys(), 
+            index = 1 )
+        
+        "*****"
+        #f"### {class_code}" 
+        data = database["Classes & Labs"][class_code]
         
         for i, (k,row) in enumerate(data.items()):
             st.markdown(f"""
                 ## [{k.strip()}]({row['Streamlit']})\n
                 **{row['Name'].strip()}**""")
-            st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
+            if row['ImagePath']:
+                st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
             st.caption(f"{row['Title']}".strip())
             
             badges = [
@@ -119,7 +127,7 @@ with cols[1]:
             ]
 
             st.markdown(generate_badge_table(badges))
-
+        
     elif category == "Repositories":
         data = database["Repositories"]
         

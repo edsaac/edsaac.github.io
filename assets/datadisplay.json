@@ -57,20 +57,45 @@
             "GDocument": "https://docs.google.com/presentation/d/19FHSVl-1zOyDizwIS_TKlSMjRn4btvFn/edit?usp=sharing&ouid=100415341907401448709&rtpof=true&sd=true"
         }
     },
-    "Laboratories":{
-        "CIVENV440 - Lab1 ":{
-            "Name": "Turbulence and open channel flow",
-            "Title": "Gather high-resolution velocity data of an open channel flow to quantify its turbulence characteristics.",
-            "ImagePath": "cee440-lab1.png",
-            "Streamlit": "https://edsaac-adv-processing--cee440-lab1-haq37n.streamlitapp.com/",
-            "Repo": "https://github.com/edsaac/ADV-processing"
+    "Classes & Labs":{
+        "CIV_ENV-440 - Environmental transport processes" : {
+            "CIVENV440 - Lab1 ":{
+                "Name": "Turbulence and open channel flow",
+                "Title": "Gather high-resolution velocity data of an open channel flow to quantify its turbulence characteristics.",
+                "ImagePath": "cee440-lab1.png",
+                "Streamlit": "https://edsaac-adv-processing--cee440-lab1-haq37n.streamlitapp.com/",
+                "Repo": "https://github.com/edsaac/ADV-processing"
+            },
+            "CIVENV440 - Lab2 ":{
+                "Name": "Sediment flux and bedform migration",
+                "Title": "Capture timelapse imagery of bed sediment motion to calculate morphodynamic parameters.",
+                "ImagePath": "cee440-lab2.png",
+                "Streamlit": "https://edsaac-bedform-migration--cee440-lab2-l807qm.streamlitapp.com/",
+                "Repo": "https://github.com/edsaac/bedform-migration"
+            }
         },
-        "CIVENV440 - Lab2 ":{
-            "Name": "Sediment flux and bedform migration",
-            "Title": "Capture timelapse imagery of bed sediment motion to calculate morphodynamic parameters.",
-            "ImagePath": "cee440-lab2.png",
-            "Streamlit": "https://edsaac-bedform-migration--cee440-lab2-l807qm.streamlitapp.com/",
-            "Repo": "https://github.com/edsaac/bedform-migration"
+        "CIV_ENV-340 - Hydraulics & hydrology" : {
+            "CIVENV340 - Week 1":{
+                "Name": "Flow propeties and energy losses in pipes",
+                "Title": "",
+                "ImagePath": "civenv340-wk1.png",
+                "Streamlit": "https://cee340-wk1.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+            },
+            "CIVENV340 - Week 2":{
+                "Name": "Head losses due friction and accessories",
+                "Title": "",
+                "ImagePath": "civenv340-wk2.png",
+                "Streamlit": "https://cee340-wk2.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+            },
+            "CIVENV340 - Week 3":{
+                "Name": "Pipe networks and solving non-linear systems of equations",
+                "Title": "",
+                "ImagePath": "civenv340-wk3.png",
+                "Streamlit": "https://cee340-wk3.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+            }
         }
     },
     "Repositories":{
