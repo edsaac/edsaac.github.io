@@ -75,7 +75,7 @@ cols = st.columns([1, 2.5], gap="large")
 with cols[0]:
 
     categories = database.keys()
-    category = st.radio("Select an option:", categories, 0)
+    category = st.radio("Select an option:", categories, 1, label_visibility='collapsed')
 
     "******"
     """**Edwin Y. Saavedra Cifuentes** """
