@@ -95,6 +95,27 @@
                 "ImagePath": "civenv340-wk3.png",
                 "Streamlit": "https://cee340-wk3.streamlit.app/",
                 "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+            },
+            "CIVENV340 - Week 4":{
+                "Name": "Pumps, characteristic curves and operation point",
+                "Title": "",
+                "ImagePath": "civenv340-wk4.png",
+                "Streamlit": "https://cee340-wk4.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+            },
+            "CIVENV340 - Week 5":{
+                "Name": "Introduction to open channel flow",
+                "Title": "",
+                "ImagePath": "civenv340-wk5.png",
+                "Streamlit": "https://cee340-wk5.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+            },
+            "CIVENV340 - Week 6":{
+                "Name": "Transitions, gradually varied flow and sediment transport",
+                "Title": "",
+                "ImagePath": "civenv340-wk6.png",
+                "Streamlit": "https://cee340-wk6.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
             }
         }
     },
