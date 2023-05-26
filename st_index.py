@@ -3,11 +3,11 @@ import json
 from typing import Union
 
 st.set_page_config(
-    page_title="Edwin site",
+    page_title="Edwin's site",
     page_icon="🧊",
     layout="centered",
     initial_sidebar_state="collapsed",
-    menu_items={"About": "Last updated: 03/13/2022"},
+    menu_items={"About": "Last updated: 05/26/2022"},
 )
 
 
@@ -69,6 +69,10 @@ with open("assets/style.css") as f:
         unsafe_allow_html=True,
     )
 
+# Get query params to personalize the landing page
+query_params = st.experimental_get_query_params()
+page = query_params.get("page", "classes")
+
 "# Hello"
 "******"
 database = load_json()
@@ -78,8 +82,21 @@ cols = st.columns([1, 2.5], gap="large")
 
 with cols[0]:
     categories = database.keys()
+
+    pgidx = 1
+
+    match page[0]:
+        case "conferences":
+            pgidx = 0
+        case "classes" | "labs":
+            pgidx = 1
+        case "repos":
+            pgidx = 2
+        case "other":
+            pgidx = 3
+
     category = st.radio(
-        "Select an option:", categories, 1, label_visibility="collapsed"
+        "Select an option:", categories, pgidx, label_visibility="collapsed"
     )
 
     "******"
