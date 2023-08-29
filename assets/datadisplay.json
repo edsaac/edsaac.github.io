@@ -151,9 +151,10 @@
         "`stpyvista`":{
             "Name": "`stpyvista`: Show 3D visualizations from PyVista in Streamlit",
             "ImagePath": "stpyvista-splash.gif",
-            "Repo": "https://github.com/edsaac/streamlit-PyVista-viewer",
-            "Documentation": "https://discuss.streamlit.io/t/stpyvista-show-pyvista-3d-visualizations-in-streamlit/31802",
-            "Maintained": "yes"
+            "Repo": "https://github.com/edsaac/stpyvista",
+            "Documentation": "https://stpyvista.streamlit.app/",
+            "Maintained": "yes",
+            "Embed": "https://stpyvista.streamlit.app/?embed=true"
         },
         "BIOPARTICLE":{
             "Name": "`BIOPARTICLE`: A module for PFLOTRAN for dynamic particle transport in groundwater.",

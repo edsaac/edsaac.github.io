@@ -165,7 +165,20 @@ with cols[1]:
                 ## [{k.strip()}]({row['Repo']})\n
                 **{row['Name'].strip()}**"""
             )
-            st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
+
+            if row.get("Embed", None):
+                st.markdown(
+                    """
+                    <iframe
+                    src="https://stpyvista.streamlit.app/?embed=true"
+                    height="400"
+                    style="width:100%;border:none;"
+                    ></iframe>
+                    """, unsafe_allow_html=True
+                )
+            
+            else: 
+                st.image(f"./assets/screenshots/{row['ImagePath']}", use_column_width=True)
 
             badges = [
                 generate_badge("Github Docs", row["Documentation"]),
@@ -174,6 +187,8 @@ with cols[1]:
             ]
 
             st.markdown(generate_badge_table(badges))
+        
+        
 
     elif category == "Other":
         data = database["Other"]
