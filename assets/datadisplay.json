@@ -1,8 +1,16 @@
 {
     "Conferences":{
+        "Sorbonne2023":{
+            "Name": "Seminaire METIS - Sorbonne Université",
+            "Title": "Turbulence-driven hyporheic flow: connecting fine particle deposition, clogging, and nutrient cycles.",
+            "ImagePath": "grl-sorbonne2023.png",
+            "Abstract": false,
+            "Iposter": false,
+            "GDocument": "https://drive.google.com/file/d/1yFgy6nQWUTCYXttDaDrarAb6Y6cbOLPb/view?usp=sharing"
+        },
         "PUJ2023":{
             "Name": "Seminario de la Facultad de Estudios Ambientales y Rurales (FEAR) - Pontificia Universidad Javeriana",
-            "Title": "Visualización de datos en páginas web con streamlit",
+            "Title": "Visualización de datos en páginas web con streamlit.",
             "ImagePath": "streamlit_puj2023.png",
             "Abstract": false,
             "Iposter": false,
