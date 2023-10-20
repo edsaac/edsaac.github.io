@@ -1,7 +1,7 @@
 {
     "Conferences":{
         "Sorbonne2023":{
-            "Name": "Seminaire METIS - Sorbonne Université",
+            "Name": "Séminaire METIS - Sorbonne Université",
             "Title": "Turbulence-driven hyporheic flow: connecting fine particle deposition, clogging, and nutrient cycles.",
             "ImagePath": "grl-sorbonne2023.png",
             "Abstract": false,

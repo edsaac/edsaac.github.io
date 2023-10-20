@@ -104,7 +104,7 @@ with cols[0]:
     """PhD.(c) - Northwestern University"""
 
     st.markdown(
-        """[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://scholar.google.com/citations?hl=en&user=th-VSYIAAAAJ&view_op=list_works&sortby=pubdate)"""
+        """[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![ORCiD](https://img.shields.io/static/v1?label=&message=%20ORCiD&color=ff4b4b&logo=orcid)](https://orcid.org/0000-0003-1242-4815) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://scholar.google.com/citations?hl=en&user=th-VSYIAAAAJ&view_op=list_works&sortby=pubdate)"""
     )
 
 with cols[1]:
