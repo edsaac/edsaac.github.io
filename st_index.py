@@ -83,7 +83,7 @@ cols = st.columns([1, 2.5], gap="large")
 with cols[0]:
     categories = database.keys()
 
-    pgidx = 1
+    pgidx = 0
 
     match page[0]:
         case "conferences":
