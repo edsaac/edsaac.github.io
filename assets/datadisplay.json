@@ -1,5 +1,21 @@
 {
     "Conferences":{
+        "AGU2023":{
+            "Name": "American Geophysical Union - Annual Meeting - 2023 (San Francisco, CA)",
+            "Title": "Hydraulic and biochemical optimization of soil-aquifer systems impacted by bioclogging",
+            "ImagePath": "ppt_agu2023.png",
+            "Abstract": false,
+            "Iposter": false,
+            "GDocument": "https://drive.google.com/file/d/1wDgFZCHS9wA0LpI8IWRtsXHd8KbqI1uc/view?usp=sharing"
+        },
+        "Northwestern2023":{
+            "Name": "Environmental Engineering & Sciences Seminar Series - Northwestern University",
+            "Title": "Turbulence-driven hyporheic flow: connecting fine particle deposition, clogging, and nutrient cycles.",
+            "ImagePath": "grl-northwestern2023.png",
+            "Abstract": false,
+            "Iposter": false,
+            "GDocument": "https://drive.google.com/file/d/1cl9R7RpN2ltONGi7BtuiCp3PssWm2fSV/view?usp=sharing"
+        },
         "Sorbonne2023":{
             "Name": "Séminaire METIS - Sorbonne Université",
             "Title": "Turbulence-driven hyporheic flow: connecting fine particle deposition, clogging, and nutrient cycles.",
@@ -25,10 +41,10 @@
             "GDocument": "https://docs.google.com/presentation/d/1dwTfUJVENiV4YGwjLPF12VXz-Fe8c9gYp7rA7bJYAa8/edit?usp=sharing"
         },
         "AGU2022":{
-            "Name": "American Geophysical Union - Fall Meeting - 2022",
+            "Name": "American Geophysical Union - Fall Meeting - 2022 (Chicago, IL)",
             "Title": "Modeling unsaturated flow and bioclogging to optimize SAT operation strategies",
             "ImagePath": "ppt_agu2022.png",
-            "Abstract": false,
+            "Abstract": "https://ui.adsabs.harvard.edu/abs/2022AGUFM.H52A..05S/abstract",
             "Iposter": false,
             "GDocument": "https://docs.google.com/presentation/d/1IoUZily2oB-nW0FAhP2iy2QW5YvHB5fB6kuVHKSueGQ/edit?usp=sharing"
         },
@@ -41,7 +57,7 @@
             "GDocument": "https://drive.google.com/file/d/1mWvkKyYLSsTlcwhARnBcJIzybApNEjBO/view?usp=sharing"
         },
         "AGU2021":{
-            "Name": "American Geophysical Union - Fall Meeting - 2021",
+            "Name": "American Geophysical Union - Fall Meeting - 2021 (New Orleans, LA)",
             "Title": "Turbulence drives hyporheic exchange and fine particle deposition across the entire riverbed surface",
             "ImagePath": "eposter_agu2021.png",
             "Abstract": "https://ui.adsabs.harvard.edu/abs/2021AGUFM.H35A..08S/abstract",
