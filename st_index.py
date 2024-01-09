@@ -12,38 +12,38 @@ st.set_page_config(
 
 
 def generate_badge_table(badges: list):
-    table_header = [f" {badge}" for badge in badges if badge is not None]
-
-    table_markdown = f"""
-    {"|".join(table_header)}
-    | {":---:|" * len(table_header)}
     
-    ****
-    """
+    chain_badges = "&emsp;".join(list(filter(lambda x: x is not None, badges)))
 
-    return table_markdown
+    st.write(
+        "<p align=\"center\">"
+        f"{chain_badges}"
+        "</p>", unsafe_allow_html=True         
+    )
+    
+    "****"
 
 
 @st.cache_data
 def generate_badge(kind: str, link: Union[str, bool]) -> Union[str, None]:
     if link:
         if kind == "Streamlit App":
-            mkd = f"[![{kind}](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]({link})"
+            mkd = f"<a href='{link}'><img src='https://static.streamlit.io/badges/streamlit_badge_black_white.svg' alt='Open in Streamlit Community Cloud'></a>"""
         elif kind == "Github Repo":
-            mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Repository&color=black&logo=github)]({link})"
+            mkd = f"<a href='{link}'><img src='https://img.shields.io/static/v1?label=&message=Repository&color=black&logo=github' alt='Show Github repository'></a>"""
         elif kind == "Google Drive":
-            mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Slides&color=black&logo=googledrive)]({link})"
+            mkd = f"<a href='{link}'><img src='https://img.shields.io/static/v1?label=&message=Slides&color=black&logo=googledrive' alt='Slides in Google Drive'></a>"""
         elif kind == "Google Scholar - Abstract":
-            mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Abstract&color=black&logo=googlescholar)]({link})"
+            mkd = f"<a href='{link}'><img src='https://img.shields.io/static/v1?label=&message=Abstract&color=black&logo=googlescholar' alt='Show in Google Scholar'></a>"""
         elif kind == "Iposter":
-            mkd = f"[![{kind}](https://img.shields.io/badge/🪧-Iposter-purple.svg)]({link})"
+            mkd = f"<a href='{link}'><img src='https://img.shields.io/badge/🪧-Iposter-purple.svg' alt='Show Iposter'></a>"""
         elif kind == "Github Docs":
-            mkd = f"[![{kind}](https://img.shields.io/static/v1?label=&message=Documentation&color=gray&logo=github)]({link})"
+            mkd = f"<a href='{link}'><img src='https://img.shields.io/static/v1?label=&message=Documentation&color=gray&logo=github' alt='Show Documentation'></a>"""
         elif kind == "Maintained":
             if link == "yes":
-                mkd = f"![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)"
+                mkd = f"<img src='https://img.shields.io/badge/Maintained%3F-yes-green.svg' alt='It is currently maintained'>"""
             else:
-                mkd = f"![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)"
+                mkd = f"<img src='https://img.shields.io/badge/Maintained%3F-no-red.svg' alt='It is not maintained'>"""
         else:
             mkd = "<<Badge Missing>>"
         return mkd
@@ -101,7 +101,7 @@ with cols[0]:
 
     "******"
     """**Edwin Y. Saavedra Cifuentes** """
-    """PhD.(c) - Northwestern University"""
+    """Ph.D.(c) - Northwestern University"""
 
     st.markdown(
         """[![Github](https://img.shields.io/static/v1?label=&message=%20Github&color=ff4b4b&logo=github)](https://github.com/edsaac/) [![ORCiD](https://img.shields.io/static/v1?label=&message=%20ORCiD&color=ff4b4b&logo=orcid)](https://orcid.org/0000-0003-1242-4815) [![Google Scholar](https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=ff4b4b&logo=googlescholar)](https://scholar.google.com/citations?hl=en&user=th-VSYIAAAAJ&view_op=list_works&sortby=pubdate)"""
@@ -126,7 +126,7 @@ with cols[1]:
                 generate_badge("Google Drive", row["GDocument"]),
             ]
 
-            st.markdown(generate_badge_table(badges))
+            generate_badge_table(badges)
 
     elif category == "Classes & Labs":
         class_code = st.selectbox(
@@ -154,7 +154,7 @@ with cols[1]:
                 generate_badge("Github Repo", row["Repo"]),
             ]
 
-            st.markdown(generate_badge_table(badges))
+            generate_badge_table(badges)
 
     elif category == "Repositories":
         data = database["Repositories"]
@@ -186,7 +186,7 @@ with cols[1]:
                 generate_badge("Maintained", row["Maintained"]),
             ]
 
-            st.markdown(generate_badge_table(badges))
+            generate_badge_table(badges)
         
         
 
@@ -207,4 +207,4 @@ with cols[1]:
                 generate_badge("Maintained", row["Maintained"]),
             ]
 
-            st.markdown(generate_badge_table(badges))
+            generate_badge_table(badges)
