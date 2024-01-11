@@ -183,7 +183,7 @@
         "`stpyvista` + `geovista`":{
             "Name": "Show 3D cartography from Geovista in Streamlit",
             "ImagePath": "stpyvista-splash.gif",
-            "Repo": "https://github.com/edsaac/edsaac/stpyvista-geo",
+            "Repo": "https://github.com/edsaac/stpyvista-geo",
             "Documentation": "https://geovista.streamlit.app/",
             "Maintained": "yes",
             "Embed": "https://geovista.streamlit.app/?embed=true"
