@@ -6,6 +6,10 @@ img {
     margin-right: auto;
 }
 
+.stMarkdown iframe{
+    border-radius: 2.5%;
+}
+
 button[title^=Exit]+div [data-testid=stImage]{
     text-align: center;
     display: block;

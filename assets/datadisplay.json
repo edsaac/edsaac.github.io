@@ -173,15 +173,23 @@
     },
     "Repositories":{
         "`stpyvista`":{
-            "Name": "`stpyvista`: Show 3D visualizations from PyVista in Streamlit",
+            "Name": "Show 3D visualizations from PyVista in Streamlit",
             "ImagePath": "stpyvista-splash.gif",
             "Repo": "https://github.com/edsaac/stpyvista",
             "Documentation": "https://stpyvista.streamlit.app/",
             "Maintained": "yes",
             "Embed": "https://stpyvista.streamlit.app/?embed=true"
         },
+        "`stpyvista` + `geovista`":{
+            "Name": "Show 3D cartography from Geovista in Streamlit",
+            "ImagePath": "stpyvista-splash.gif",
+            "Repo": "https://github.com/edsaac/edsaac/stpyvista-geo",
+            "Documentation": "https://geovista.streamlit.app/",
+            "Maintained": "yes",
+            "Embed": "https://geovista.streamlit.app/?embed=true"
+        },
         "BIOPARTICLE":{
-            "Name": "`BIOPARTICLE`: A module for PFLOTRAN for dynamic particle transport in groundwater.",
+            "Name": "A module for PFLOTRAN for dynamic particle transport in groundwater.",
             "ImagePath": "pflotran-bioparticle.png",
             "Repo": "https://edsaac.github.io/bioparticle/",
             "Documentation": "https://www.pflotran.org/documentation/user_guide/cards/subsurface/chemistry/bioparticle_card.html",

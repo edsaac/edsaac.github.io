@@ -168,9 +168,9 @@ with cols[1]:
 
             if row.get("Embed", None):
                 st.markdown(
-                    """
+                    f"""
                     <iframe
-                    src="https://stpyvista.streamlit.app/?embed=true"
+                    src="{row['Embed']}"
                     height="400"
                     style="width:100%;border:none;"
                     ></iframe>
