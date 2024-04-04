@@ -174,11 +174,19 @@
     "Repositories":{
         "`stpyvista`":{
             "Name": "Show 3D visualizations from PyVista in Streamlit",
-            "ImagePath": "stpyvista-splash.gif",
+            "ImagePath": false,
             "Repo": "https://github.com/edsaac/stpyvista",
             "Documentation": "https://stpyvista.streamlit.app/",
             "Maintained": "yes",
             "Embed": "https://stpyvista.streamlit.app/?embed=true"
+        },
+        "`stpyvista` + DEM example":{
+            "Name": "Generate a 3D surface from an image",
+            "ImagePath": false,
+            "Repo": "https://github.com/edsaac/stpyvista-tests",
+            "Documentation": "https://stpyvista-dog-dem.streamlit.app/",
+            "Maintained": "yes",
+            "Embed": "https://stpyvista-dog-dem.streamlit.app/?embed=true"
         },
         "`stpyvista` + `geovista`":{
             "Name": "Show 3D cartography from Geovista in Streamlit",

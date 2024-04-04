@@ -19,8 +19,8 @@ button[title^=Exit]+div [data-testid=stImage]{
 
 div[data-testid=stImage] {
     position: relative;
-    opacity: 0.85;
-    transition: 0.3s;
+    opacity: 0.90;
+    transition: 0.2s;
 }
 
 div[data-testid=stImage]::after {
@@ -29,7 +29,7 @@ div[data-testid=stImage]::after {
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0) 95%,rgba(255, 75, 75, 0.5) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0) 95%,#00a2ff6d 100%);
 }
 
 div[data-testid=stImage]:hover {
@@ -38,7 +38,7 @@ div[data-testid=stImage]:hover {
 
 a[href] {
     text-decoration: none;
-    color: #ff4b4b;
+    color: #00a2ff97;
 }
 
 h1 {
@@ -46,19 +46,25 @@ h1 {
     text-align: center;
     position: sticky;
     top: 0;
+    color: #00a2ff97;
+    border-bottom: 4px solid #cf409f;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 h2 {
     font-size: 2.0rem;
     font-weight: bolder;
     text-align: center;
-    color: #ff4b4b;
+    color: #00a2ff97;
 }
 
 div[data-testid=stCaptionContainer] {
     font-size: 0.95rem;
     text-align: center;
-    color: #ff4b4b;
+    color: #cf409f;
 }
 
 div.stRadio {
@@ -72,26 +78,9 @@ div.stRadio {
 }
 
 div.stRadio:hover {
-    background-color:  rgba(255, 75, 75, 0.2);
+    background-color:  #cf409f22;
     opacity: 1;
 }
-
-
-div.stRadio::after {
-    background-color: green;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-}
-
-/* div.stRadio div[role=radiogroup] label div.st-af{
-    font-size: 2rem;
-} */
-
-/* iframe {
-    border-radius: 10px;
-    border: solid 1px #ff4b4b;
-} */
 
 tbody {
     visibility: hidden;
@@ -111,4 +100,52 @@ th {
 
 p strong{
     text-align: center;
+}
+
+div[data-testid="stAppViewBlockContainer"]{
+    padding-top: 0rem;
+}
+
+header[data-testid="stHeader"]{
+    display: none;
+}
+
+iframe[data-testid="stIFrame"]{
+    border-radius: 4%;
+}
+
+div[data-testid="stCaptionContainer"]{
+    visibility: collapse;
+    display: none;
+}
+
+div[data-testid="stCaptionContainer"]:hover{
+    visibility: visible;
+}
+
+div[data-testid="stPopover"] button {
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+div[data-testid="stPopover"] button:hover{
+    border: #0075b8 1px solid;
+}
+
+div[data-testid="stPopover"] button:focus:not(:active){
+    border: #0075b8 1px solid;
+}
+
+div[data-testid="stPopover"] button:focus{
+    background-color: #0075b827;
+}
+
+div[data-testid="stPopover"] button p{
+    color: #0075b8;
+}
+
+div[data-testid="stPopover"] button p:first-child{
+    font-size: 1.50rem;
 }
