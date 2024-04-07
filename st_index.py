@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-from typing import Union
+from typing import Union, Optional
 
 st.set_page_config(
     page_title="Edwin's site",
@@ -10,6 +10,15 @@ st.set_page_config(
     menu_items={"About": "Last updated: 4/4/2024"},
 )
 
+def right_text(text:Optional[str]):
+    if text: 
+        st.html(
+            f"""
+            <p style="text-align:right; line-height:0.1em; color:#cf409f;">
+                <em>{text}</em>
+            </p>
+            """
+        )
 
 def generate_badge_table(badges: list):
     chain_badges = "&emsp;".join(list(filter(lambda x: x is not None, badges)))
@@ -85,10 +94,9 @@ with open("assets/style.css") as f:
     )
 
 # Get query params to personalize the landing page
-page = st.query_params.get("page", "repos")
+page = st.query_params.get("page", "conferences")
 
 "# Hello"
-"&nbsp;"
 
 database = load_json()
 
@@ -110,21 +118,29 @@ with cols[0]:
         case "other":
             pgidx = 3
 
-    with st.popover("🔍\n\nSelect an option", use_container_width=True):
-        category = st.radio(
-            "Select an option:",
-            categories,
-            pgidx,
-            label_visibility="collapsed",
-            horizontal=False,
-        )
+    category = st.session_state.get("category", "")
 
-    "******"
+    "&nbsp;"
+    with st.popover("☰", use_container_width=True):
+        category = st.radio(
+            "Explore other sections:",
+            categories,
+            index=pgidx,
+            # label_visibility="collapsed",
+            horizontal=False,
+            key="category"
+        )
+    
+    "*****"
+    
     st.markdown(
         """
-        <p style="text-align:center;">
-            <b>Edwin Y. Saavedra Cifuentes</b><br>
-            Ph.D.(c) - Northwestern University
+        <p style="text-align:center; line-height:1.2rem;">
+            <b>Edwin Y. Saavedra Cifuentes</b>
+        </p>
+        <p style="text-align:center; font-size:0.8rem; line-height:0.9rem;">
+            Ph.D.(c) - Civil & Environmental Engineering <br>
+            Northwestern University
         </p>
         """,
         unsafe_allow_html=True,
@@ -151,6 +167,8 @@ with cols[0]:
     )
 
 with cols[1]:
+    right_text(category)
+
     if category == "Conferences":
         data = database["Conferences"]
 
@@ -209,7 +227,7 @@ with cols[1]:
             )
 
             if row.get("Embed", None):
-                st.components.v1.iframe(row["Embed"], height=500, scrolling=True)
+                st.components.v1.iframe(row["Embed"], height=400, scrolling=True)
 
             else:
                 st.image(
