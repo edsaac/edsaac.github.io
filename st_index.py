@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.components.v1 import iframe
 import json
 from typing import Union, Optional
 
@@ -135,8 +136,12 @@ def main():
                 <b>Edwin Y. Saavedra Cifuentes</b>
             </p>
             <p style="text-align:center; font-size:0.8rem; line-height:0.9rem;">
-                Ph.D.(c) - Civil & Environmental Engineering <br>
+                Ph.D. Civil and Environmental Engineering <br>
                 Northwestern University
+            </p>
+            <p style="text-align:center; font-size:0.8rem; line-height:0.9rem;">
+                M.S.E. Water Resources <br>
+                Universidad Nacional de Colombia - Bogotá
             </p>
             """
         )
@@ -218,7 +223,7 @@ def main():
                 st.markdown(f"**{row['Name'].strip()}**")
 
                 if row.get("Embed", None):
-                    st.components.v1.iframe(row["Embed"], height=400, scrolling=True)
+                    iframe(row["Embed"], height=400, scrolling=True)
 
                 else:
                     st.image(
