@@ -87,14 +87,14 @@
                 "Name": "Turbulence and open channel flow",
                 "Title": "Gather high-resolution velocity data of an open channel flow to quantify its turbulence characteristics.",
                 "ImagePath": "cee440-lab1.png",
-                "Streamlit": "https://edsaac-adv-processing--cee440-lab1-haq37n.streamlitapp.com/",
+                "Streamlit": "https://edsaac-adv-processing.streamlit.app/",
                 "Repo": "https://github.com/edsaac/ADV-processing"
             },
             "CIVENV440 - Lab2 ":{
                 "Name": "Sediment flux and bedform migration",
                 "Title": "Capture timelapse imagery of bed sediment motion to calculate morphodynamic parameters.",
                 "ImagePath": "cee440-lab2.png",
-                "Streamlit": "https://edsaac-bedform-migration--cee440-lab2-l807qm.streamlitapp.com/",
+                "Streamlit": "https://edsaac-bedform-migration.streamlitapp.com/",
                 "Repo": "https://github.com/edsaac/bedform-migration"
             }
         },
