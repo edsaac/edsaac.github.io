@@ -99,75 +99,13 @@
             }
         },
         "CIV_ENV-340 - Hydraulics & hydrology" : {
-            "CIVENV340 - Week 1":{
-                "Name": "Flow propeties and energy losses in pipes",
+            "Hydraulics and Python":{
+                "Name": "Hydraulics and Python",
                 "Title": "",
-                "ImagePath": "civenv340-wk1.png",
-                "Streamlit": "https://cee340-wk1.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 2":{
-                "Name": "Head losses due friction and accessories",
-                "Title": "",
-                "ImagePath": "civenv340-wk2.png",
-                "Streamlit": "https://cee340-wk2.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 3":{
-                "Name": "Pipe networks and solving non-linear systems of equations",
-                "Title": "",
-                "ImagePath": "civenv340-wk3.png",
-                "Streamlit": "https://cee340-wk3.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 4":{
-                "Name": "Pumps, characteristic curves and operation point",
-                "Title": "",
-                "ImagePath": "civenv340-wk4.png",
-                "Streamlit": "https://cee340-wk4.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 5":{
-                "Name": "Introduction to open channel flow",
-                "Title": "",
-                "ImagePath": "civenv340-wk5.png",
-                "Streamlit": "https://cee340-wk5.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 6":{
-                "Name": "Transitions, gradually varied flow and sediment transport",
-                "Title": "",
-                "ImagePath": "civenv340-wk6.png",
-                "Streamlit": "https://cee340-wk6.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 7":{
-                "Name": "Hydraulic efficiency and channel design",
-                "Title": "",
-                "ImagePath": "civenv340-wk7.png",
-                "Streamlit": "https://cee340-wk7.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 8":{
-                "Name": "Water cycle, watersheds, precipitation and runoff",
-                "Title": "",
-                "ImagePath": "civenv340-wk8.png",
-                "Streamlit": "https://cee340-wk8.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 9":{
-                "Name": "Infiltration and design hydrographs",
-                "Title": "",
-                "ImagePath": "civenv340-wk9.png",
-                "Streamlit": "https://cee340-wk9.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
-            },
-            "CIVENV340 - Week 10":{
-                "Name": "Probability, return period and hydrological risk",
-                "Title": "",
-                "ImagePath": "civenv340-wk10.png",
-                "Streamlit": "https://cee340-wk10.streamlit.app/",
-                "Repo": "https://github.com/edsaac/NU.CIVENV340/"
+                "ImagePath": "civenv340-book.png",
+                "Streamlit": "https://hydraulics.streamlit.app/",
+                "Repo": "https://github.com/edsaac/NU.CIVENV340/",
+                "Embed": "https://hydraulics.streamlit.app/?embed=true"
             }
         }
     },

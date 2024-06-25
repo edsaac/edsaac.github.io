@@ -201,7 +201,10 @@ def main():
                 st.header(f"[{k.strip()}]({row['Streamlit']})", anchor=False)
                 st.markdown(f"**{row['Name'].strip()}**")
 
-                if row["ImagePath"]:
+                if row.get("Embed", None):
+                    iframe(row["Embed"], height=400, scrolling=True)
+
+                else:
                     st.image(
                         f"./assets/screenshots/{row['ImagePath']}",
                         use_column_width=True,
@@ -260,5 +263,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print(st.header.__func__.__dict__)
     main()
