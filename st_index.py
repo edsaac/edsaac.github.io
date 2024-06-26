@@ -149,16 +149,16 @@ def main():
         st.html(
             """
             <p style="text-align:center;">
-            <a href="https://github.com/edsaac/">
+            <a href="https://github.com/edsaac/" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/static/v1?label=&message=%20Github&color=053957&logo=github" alt="Github homepage">
             </a>
-            <a href="https://orcid.org/0000-0003-1242-4815">
+            <a href="https://orcid.org/0000-0003-1242-4815" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/static/v1?label=&message=%20ORCiD&color=a6a8ab&logo=orcid" alt="ORCiD page">
             </a>
-            <a href="https://scholar.google.com/citations?hl=en&user=th-VSYIAAAAJ&view_op=list_works&sortby=pubdate">
+            <a href="https://scholar.google.com/citations?hl=en&user=th-VSYIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=058657&logo=googlescholar" alt="Google Scholar page">
             </a>
-            <a href="https://www.linkedin.com/in/edsaac/">
+            <a href="https://www.linkedin.com/in/edsaac/" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/static/v1?label=&message=%20Linkedin&color=589acf&logo=linkedin" alt="Linkedin page">
             </a>
             </p>
