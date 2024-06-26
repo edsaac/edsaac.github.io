@@ -159,7 +159,7 @@ def main():
                 <img src="https://img.shields.io/static/v1?label=&message=%20Google%20Scholar&color=058657&logo=googlescholar" alt="Google Scholar page">
             </a>
             <a href="https://www.linkedin.com/in/edsaac/">
-                <img src="https://img.shields.io/static/v1?label=&message=%20Linkedin&color=589acf&logo=github" alt="Linkedin page">
+                <img src="https://img.shields.io/static/v1?label=&message=%20Linkedin&color=589acf&logo=linkedin" alt="Linkedin page">
             </a>
             </p>
             """
