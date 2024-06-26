@@ -261,6 +261,8 @@ def main():
 
                 generate_badge_table(badges)
 
+        if st.button("CLEAR"):
+            st.cache_data.clear()
 
 if __name__ == "__main__":
     main()
