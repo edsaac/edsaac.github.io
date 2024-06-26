@@ -99,8 +99,8 @@
             }
         },
         "CIV_ENV-340 - Hydraulics & hydrology" : {
-            "Hydraulics and Python":{
-                "Name": "Hydraulics and Python",
+            "Hydraulics and Hydrology with Python":{
+                "Name": "Hydraulics and Hydrology with Python",
                 "Title": "",
                 "ImagePath": "civenv340-book.png",
                 "Streamlit": "https://hydraulics.streamlit.app/",
