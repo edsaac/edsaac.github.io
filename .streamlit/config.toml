@@ -1,5 +1,7 @@
 [browser]
-gatherUsageStats=false
+gatherUsageStats = false
 
 [theme]
-base="dark"
+base = "light"
+primaryColor = "#339999"
+backgroundColor = "#dfd2dd"
