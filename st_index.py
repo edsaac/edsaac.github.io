@@ -21,7 +21,13 @@ def warn_moved():
 warn_moved()
 cols = st.columns([0.4, 1], vertical_alignment="center")
 with cols[0]:
-    st.header("**:rainbow-background[🔗 https://edsaac.me 🔗]**")
+    st.link_button(
+        "**:rainbow-background[https://edsaac.me]**",
+        "https://edsaac.me",
+        help="Go to new site!",
+        icon="🔗",
+        use_container_width=True,
+    )
 
 with cols[1]:
     iframe("https://edsaac.me", height=800, scrolling=True)
